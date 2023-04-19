@@ -1,0 +1,58 @@
+To Fix from D1 based on TA Comments:
+( ) View Animal
+    ( ) Integer values displayed (translate them to strings. Not a requirement though)
+    (X) Implementation could be cleaner
+            ex: SQL queries inside mainwindow.cpp (make a function inside database)
+( ) Add Animal
+    (X) After adding animal to db perhaps reset the form
+    ( ) allows to add animals with empty information (which is fine given our algorithm)
+    ( ) allows to add animal with ID so large it won't be displayed
+        (X) *Fixed in a cheap and dirty way. maybe revise?
+
+
+TODO from D2:
+(X) Change Add Animal attributes options to match the document
+(X) Increment AnimalID for add animal
+(X) Increment ClientID for add client
+(X) Limit size of AnimalID for add animal
+( ) Limit size of ClientID for add client
+(X) Add Client Feature.
+(X) Move View Animal Query to db in Staff window
+(X) Move View Animal Query to db in Client window
+
+
+D3 TODO:
+(X) Logout button
+    (X) Logout functionality
+(X) View Specific Animal
+    (X) Popup screen
+    (X) Design UI (make it capable to be edited aswell)
+    (X) Fill popup screen + UI with desired info from ViewAnimalList table
+(X) Edit Client
+    (X) Use ViewClientWindow and add Edit client functionality
+(X) Edit Animal
+    (X) Use ViewAnimalWindow and add Edit animal functionality
+NOTE: Possible Refactoring: One ViewWindow and function to determine if its ViewAnimal or ViewClient.
+(X) in handlePErmissions, ignoring error case and default case, assuming everything is a client.
+(X) make sure the client can only edit their own details, not a random clients details.
+
+D3 Proposed Refactoring (Scrapped):
+( ) Make mainWindow and mainWindowClient inherit an overarching cuacsMainWindow class in order to
+    inherit common functionality (ie. Potentially no need to load database every time, view
+    functions are the same, etc. May be worth having all functions in this overarching class and
+    having the subclasses just refer to them.)
+    (X) Figure out how to handle the inheritance and add it.
+    ( ) make cuACSMainWindow a proper base class
+        (X) Abstract
+        ( ) Shared functionality of mainWindow and mainWindowClient
+    ( ) Check code and add any additional functions to cuACSMainWindow if deemed necessary
+( ) Create Client/Animal class that loads data from database, is used to update view (potentially,
+    not required though) and add client/animal (ie. new additions will be added as an animal
+    object, and we'll add that animal object to the database).
+        *NOTE: If we're trying to decompose this code into subsystems, it may be worth to have
+        everything run through the client/animal class (ie. have these classes be the middle man
+        between the mainWondow and the database). This would reduce coupling. May promote a 3-tier
+        or repository sort of system?
+        *NOTE 2: If we go with this idea, it may be useful to make these classes inherit from an
+        overarching class as well, since the attributes and functions to get/set/load/manipulate
+        the attributes are the same.

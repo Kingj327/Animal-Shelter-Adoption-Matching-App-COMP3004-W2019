@@ -1,0 +1,78 @@
+******************************* Main Things for D4 *******************************
+Algorithm Document:
+( ) Modify Algorithm document depending on implementation
+
+Algorithm Implementation:
+( ) Algorithm page switch button
+( ) Run Algorithm Button
+    ( ) Step 1
+    ( ) Step 2
+    ( ) Step 3
+    ( ) Step 4
+( ) Show matches (perhaps in a new window?)
+
+********************************* Smaller Things *********************************
+Home page:
+( ) Update text on home page
+( ) Remove Tab switcher for something cleaner
+
+Query Database:
+( ) Update Label and lineEdit with proper table information
+
+Add Animal:
+( ) Clean up UI, make sure no unused widgets
+( ) Fix ID incrementor
+    ( ) Remove ability to change ID?
+( ) Restrict lineEdit to QString/int only (as required)
+( ) Remove (or explicitly define/allow) the ability to add attributes with no data
+
+Add Client:
+( ) Clean up UI, make sure no unused widgets
+( ) Fix ID incrementor
+    ( ) Remove ability to change ID?
+( ) Restrict lineEdit to QString/int/email (as required)
+( ) Add client attribute preferences to this page to be added to database.
+( ) Remove (or explicitly define/allow) the ability to add attributes with no data
+
+View Animal:
+( ) Change attribute numbers to their related text?
+( ) Add a "delete/remove animal from database" option
+
+View Client:
+( ) Add a username/password automatically upon creating a client
+    ( ) Let them know of this created username/password.
+( ) Option to view client info and client info + preferences?
+    ( ) If preferences added, change attribute numbers to their related text?
+( ) Add a "delete/remove client from database" option
+
+View/Edit Specific Animal:
+( ) Clean up UI, make sure no unused widgets
+( ) Restrict lineEdit to QString/int (as required)
+( ) Add a "delete/remove animal from database" option
+( ) Figure out how to update generic view table on closing of this window?
+
+View/Edit Specific Client:
+( ) Clean up UI, make sure no unused widgets
+( ) Restrict lineEdit to QString/int/email (as required)
+( ) Add a "delete/remove client from database" option
+( ) Figure out how to update generic view table on closing of this window?
+( ) Potentially show the user their username/password upon clicking a certain button?
+
+Design Patterns:
+( ) Implement Singleton on StorageDatabase?
+( ) Implement ____ (Stragety?) on Algorithm?
+( ) Implement Iterator in Algorithm?
+( ) Implement ______ on ______ ?
+
+
+************************************* Extra *************************************
+Generic:
+( ) Edit text at the top of the window from "MainWindow" to something related to our name
+( ) Clean up files that are not in use
+( ) .css
+
+Database:
+( ) Clean up/Decompose code
+
+MainWindow:
+( ) Clean up/Decompose code

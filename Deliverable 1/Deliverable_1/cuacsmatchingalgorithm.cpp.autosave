@@ -1,0 +1,325 @@
+#include "cuacsmatchingalgorithm.h"
+
+cuACSMatchingAlgorithm::cuACSMatchingAlgorithm(QList<QList<QString>> *animals, QList<QList<QString>> *clients)
+{
+    animalsList = animals;
+    clientsList = clients;
+    part1();
+    part2();
+//    part2(1);
+//    part2(2);
+    part3();
+}
+
+/* NOTE: if creating a "Run" functions, make sure you have a "Clear all vairables" function for reusability */
+
+void cuACSMatchingAlgorithm::part1(){
+    qDebug() << "\n********** Algorithm Part 1 **********";
+
+    clientPercentageList = convertToPercentages(getCatValuesOfUser(clientsList, CLIENT_NON_PHYS_INDEX));
+    animalPercentageList = convertToPercentages(getCatValuesOfUser(animalsList, ANIMAL_NON_PHYS_INDEX));
+    clientPriorityCatList = determinePriorityCategoryOrder(clientPercentageList);
+    animalPriorityCatList = determinePriorityCategoryOrder(animalPercentageList);
+
+    qDebug() << "catValue = " << getCatValuesOfUser(clientsList, CLIENT_NON_PHYS_INDEX);
+    qDebug() << "percentage = " << clientPercentageList;
+    qDebug() << "Priority Cat = " << clientPriorityCatList;
+
+    qDebug() << "";
+
+    qDebug() << "catValue = " << getCatValuesOfUser(animalsList, ANIMAL_NON_PHYS_INDEX);
+    qDebug() << "percentage = " << animalPercentageList;
+    qDebug() << "Priority Cat = " << animalPriorityCatList;
+
+}
+
+QList<QList<int>> cuACSMatchingAlgorithm::getCatValuesOfUser(QList<QList<QString>> *userList, int offset){
+    QList<QList<int>> catValue;
+    for (int i = 0; i < userList->size(); i++){
+//        qDebug() << "Client ["<<i<<"] = " << clientsList->value(i)[1];
+        QList<int> individualUserCatValue;
+        for (int j = 0; j < catIndex.size(); j++){
+            int sum = 0;
+            for (int k = 0; k <= catIndex[j][1]-catIndex[j][0]; k++){
+//                if (i == 0) qDebug() << "k = " << k << userList->value(i)[offset + catIndex[j][0] + k].toInt();
+                sum += userList->value(i)[offset + catIndex[j][0] + k].toInt();
+            }
+            individualUserCatValue.append(sum);
+        }
+        catValue.append(individualUserCatValue);
+    }
+    return catValue;
+}
+
+QList<QList<float>> cuACSMatchingAlgorithm::convertToPercentages(QList<QList<int>> userList){
+    QList<QList<float>> userPercentageList;
+    for (int i = 0; i < userList.size(); i++){
+//        qDebug() << "Client ["<<i<<"] = " << clientsList->value(i)[1];
+        QList<float> individualUserPercentageList;
+        for (int j = 0; j < catIndex.size(); j++){
+//            if (i == 0) qDebug() << "userList = " << userList.value(i)[j]
+//                                    << ", Calculation = "
+//                                    << (userList.value(i)[j])
+//                                    << totalCatValuePerAttribute[j]
+//                                    << (float(userList.value(i)[j])/totalCatValuePerAttribute[j]);
+            individualUserPercentageList.append((float(userList.value(i)[j])/totalCatValuePerAttribute[j])*100);
+//            if (i == 0) qDebug() << "   after = " << individualUserPercentageList[j];
+        }
+        userPercentageList.append(individualUserPercentageList);
+    }
+    return userPercentageList;
+}
+
+/* Returns list where index 0 is priority, index 1 is second priority, index 2 is third priority, etc.
+   Also note the value at each index is the category number
+   (ie. value 0 = conscientiousness, 1 = sociable... */
+QList<QList<int>> cuACSMatchingAlgorithm::determinePriorityCategoryOrder(QList<QList<float>> userPercentageList){
+    QList<QList<int>> results;
+//    qDebug() << "Starting Percentages = " << userPercentageList;
+    for (int i = 0; i < userPercentageList.size(); i++){
+//        temp.append(determineUserPriorityCategoryOrder(userPercentageList->value(i)));
+        QMap<int, int> tempMap;
+        for (int j = 0; j < userPercentageList.value(i).size(); j++){
+//            if (i < 3) qDebug() << "j = " << j << userPercentageList.value(i)[j];
+            tempMap.insert(j, userPercentageList.value(i)[j]);
+        }
+
+        QList<int> tempList = tempMap.values();
+        std::sort(tempList.begin(), tempList.end());
+        std::reverse(tempList.begin(), tempList.end());
+        QList<int> temp;
+
+        for (int j = 0; j < userPercentageList.value(i).size(); j++){
+//            if (i < 3) qDebug() << "j = " << j << tempMap.key(tempList[j]) << tempList << tempMap;
+            temp.append(tempMap.key(tempList[j]));
+            tempMap.remove(tempMap.key(tempList[j]));
+        }
+        results.append(temp);
+    }
+    return results;
+}
+
+
+
+
+
+
+void cuACSMatchingAlgorithm::part2(int currentPass){
+    qDebug() << "\n********** Algorithm Part 2 **********";
+    qDebug() << "Current Pass = " << currentPass;
+
+    /*
+    1. Consider the highest scoring category as the highest priority category. That is the category we
+        will prioritize matching for the client. Also consider a threshold value that we will use to
+        find and match animals in which their category value is within the clients category value +-
+        the threshold.
+
+                If (Animal Priority Category Value)
+                within (Client Priority Category Value +- Threshold)
+                then match.
+
+    2. Repeat the above step between every possible client/animal match (cross product of clients and
+        animals).
+        */
+//    QList<QList<float>> clientPercentageList = convertToPercentages(getCatValuesOfUser(clientsList, CLIENT_NON_PHYS_INDEX));
+//    QList<QList<float>> animalPercentageList = convertToPercentages(getCatValuesOfUser(animalsList, ANIMAL_NON_PHYS_INDEX));
+//    QList<QList<int>> clientPriorityCatList = determinePriorityCategoryOrder(clientPercentageList);
+//    QList<QList<int>> animalPriorityCatList = determinePriorityCategoryOrder(animalPercentageList);
+
+//    QMap<int, QList<int>> allPotentialMatches;
+//    int threshold = 10;
+
+    // Going through all clients
+    for (int clientIndex = 0; clientIndex < clientPriorityCatList.size(); clientIndex++){
+        QList<int> tempMatches;
+
+        // Going through all animals
+        for (int animalIndex = 0; animalIndex < animalPriorityCatList.size(); animalIndex++){
+            int priorityCat = clientPriorityCatList[clientIndex][currentPass];
+            if ((clientPercentageList[clientIndex][priorityCat]
+                >= animalPercentageList[animalIndex][priorityCat] - threshold) &&
+                (clientPercentageList[clientIndex][priorityCat]
+                <= animalPercentageList[animalIndex][priorityCat] + threshold)){
+//                    if (clientIndex == 0) {
+//                        qDebug() << "Match on animal" << animalIndex << "where"
+//                                 << clientPercentageList[clientIndex][priorityCat] << "within"
+//                                 << (animalPercentageList[animalIndex][priorityCat] - threshold) << "-"
+//                                 << (animalPercentageList[animalIndex][priorityCat] + threshold);
+//                    }
+
+                // Match
+                tempMatches.append(animalIndex);
+            }
+        }
+        if (!tempMatches.isEmpty()) allPotentialMatches.insert(clientIndex, tempMatches);
+    }
+    qDebug() << "All Potential Matches = " << allPotentialMatches;
+}
+
+
+
+
+
+
+
+void cuACSMatchingAlgorithm::part3(){
+    qDebug() << "\n********** Algorithm Part 3 **********";
+    /*
+
+      1. Get info from part 2.
+
+      2. Get the amount of matches each animal/client has (both animals anc clients)
+
+      3. Main algorithm:
+
+        - Look for client with 1 match to an animal. If found, give the client that match and remove that
+          animal from every other client's list (clean up the matches).
+
+        - If no matches of size 1, look for the client with the next smallest amount of matches:
+
+            - If client not found then there are no more potential matches, so move on to part 4.
+
+            - If client found with size (# of matches to animal) > 1, then look at each animal’s individual
+              number of matches, take the animal with the smallest number of matches, and match that animal
+              to this client.
+                - Clean up the matches (ie. lets say the client above was client A, and the animal was
+                  animal #6. Since client A and animal #6 are no longer available to be matched to any
+                  other entity, remove any edges connected to them.)
+    */
+
+
+    /* Step 2, get the amount of matches for each client/animal */
+    matches.clear(); // used below, so just making sure its cleared.
+    updateNumberOfPotentialMatches();
+    maxNumberOfPotentialMatches = getMaxNumberOfPotentialMatches();
+
+
+
+    /* Step 3, match. */
+    matchAllSinglePairs();
+
+    bool flag = true;
+    while (flag){
+        matchAMultiPair();
+        matchAllSinglePairs();
+        flag = false;
+        for (int i = 0; i < allPotentialMatches.size(); i++){
+            if (!allPotentialMatches[i].isEmpty()) flag = true;
+        }
+    }
+
+    qDebug() << "\nPart 3 of Algorithm Complete. "
+                "\nThere were" << matches.size() << "matches found out of a maximum of"
+                    << maxNumberOfPotentialMatches << "possible total matches between"
+                    << clientsList->size() << "clients and" << animalsList->size() << "animals."
+                "\nMatched (clientID, animalID) pairs are:\n" << matches;
+}
+
+
+void cuACSMatchingAlgorithm::matchAllSinglePairs(){
+    /* Matches all client/animal single pairs */
+    int tempCounter = 0;
+    /* If theres atleast 1 client with only a single animal match, then go through all possible matches,
+       find all clients with a single animal pair, and match them up. */
+    if (animalNumberOfMatches.values().contains(1)){
+        for (int i = 0; i < allPotentialMatches.size(); i++){
+            if (clientNumberOfMatches[i] == 1){
+                match(i, allPotentialMatches[i][0]);
+    //            if (++tempCounter == 3) break;
+            }
+        }
+    }
+}
+
+void cuACSMatchingAlgorithm::matchAMultiPair(){
+    /* Finds a single client with the smallest amount of potnential matches > 1, and matches it. */
+    qDebug() << "\nMoving on to finding Clients with > 1 match.";
+    int tempMinNumberOfMatches = -1;
+    int tempClientID = -1;
+    for (int i = 0; i < allPotentialMatches.size(); i++){
+        if (clientNumberOfMatches[i] > 1){
+            if (clientNumberOfMatches[i] < tempMinNumberOfMatches || tempMinNumberOfMatches == -1){
+                tempClientID = i;
+                tempMinNumberOfMatches = clientNumberOfMatches[tempClientID];
+            }
+        }
+    }
+
+
+    qDebug() << "Client" << tempClientID << "found with minimum possible number of matches that are > 1. Potential matches are" << allPotentialMatches[tempClientID];
+    int tempMaxNumberOfMatches = 0;
+    int tempAnimalID = -1;
+    for (int j = 0; j < allPotentialMatches.value(tempClientID).size(); j++){
+        qDebug() << "Animal" << allPotentialMatches[tempClientID][j] << "has" << animalNumberOfMatches[allPotentialMatches[tempClientID][j]] << "potential matches.";
+        if (animalNumberOfMatches[allPotentialMatches[tempClientID][j]] > tempMaxNumberOfMatches){
+            tempAnimalID = allPotentialMatches[tempClientID][j];
+            tempMaxNumberOfMatches = animalNumberOfMatches[tempAnimalID];
+        }
+    }
+    qDebug() << "Animal" << tempAnimalID << "has the most matches. Therefore match Client" << tempClientID << "with Animal" << tempAnimalID;
+    match(tempClientID, tempAnimalID);
+}
+
+void cuACSMatchingAlgorithm::match(int clientID, int animalID){
+    /*
+        Adds client/animal pair to match QMap.
+        Removes/Cleans up potential matches (removes animal/client from potential match list)
+        Updates client/animal number of potential matches.
+
+    */
+    if (clientID != -1 && animalID != -1){
+        qDebug() << "";
+        matches.insert(clientID, animalID);
+        cleanupPotentialMatches(clientID, animalID);
+        updateNumberOfPotentialMatches();
+        qDebug() << "Matches: " << matches;
+    } else qDebug() << "One of the ID's given to \"match()\" was -1, so no matching occured.";
+
+}
+
+void cuACSMatchingAlgorithm::cleanupPotentialMatches(int clientID, int animalID){
+    qDebug() << "Pre-Cleanup: " << allPotentialMatches;
+    allPotentialMatches.remove(clientID);
+    qDebug() << "Client" << clientID << "matched and removed.";
+    for (int i = 0; i < allPotentialMatches.size(); i++){
+        if (allPotentialMatches[i].contains(animalID)){
+            allPotentialMatches[i].removeOne(animalID);
+            qDebug() << "Animal" << animalID << "removed from Client" << i;
+        }
+    }
+    qDebug() << "Post-Cleanup: " << allPotentialMatches;
+}
+
+void cuACSMatchingAlgorithm::updateNumberOfPotentialMatches(){
+    qDebug() << "Pre-Update: " << clientNumberOfMatches << animalNumberOfMatches;
+    clientNumberOfMatches.clear();
+    animalNumberOfMatches.clear();
+    for (int i = 0; i < allPotentialMatches.size(); i++){
+        clientNumberOfMatches.insert(i, allPotentialMatches[i].size());
+
+        for (int j = 0; j < allPotentialMatches[i].size(); j++){
+//            if (!matches.contains(j)){
+                int temp = 0;
+                if (animalNumberOfMatches.value(allPotentialMatches[i][j]) > temp) temp = animalNumberOfMatches.value(allPotentialMatches[i][j]);
+                animalNumberOfMatches.insert(allPotentialMatches[i][j], temp+1);
+//            }
+        }
+
+//        qDebug() << allPotentialMatches[i] << clientNumberOfMatches[i] << animalNumberOfMatches;
+    }
+    qDebug() << "Post-Update: " << clientNumberOfMatches << animalNumberOfMatches;
+}
+
+int cuACSMatchingAlgorithm::getMaxNumberOfPotentialMatches(){
+    int tempMaxNumberOfMatches = 0;
+    for (int i = 0; i < clientNumberOfMatches.size(); i++){
+        if (clientNumberOfMatches[i] > tempMaxNumberOfMatches) tempMaxNumberOfMatches = clientNumberOfMatches[i];
+    }
+
+    for (int i = 0; i < animalNumberOfMatches.size(); i++){
+        if (animalNumberOfMatches[i] > tempMaxNumberOfMatches) tempMaxNumberOfMatches = animalNumberOfMatches[i];
+    }
+    return tempMaxNumberOfMatches;
+}
+
+void cuACSMatchingAlgorithm::part4(){}

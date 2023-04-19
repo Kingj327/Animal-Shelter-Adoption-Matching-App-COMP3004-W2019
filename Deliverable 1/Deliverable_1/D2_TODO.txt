@@ -1,0 +1,55 @@
+To Fix from D1 based on TA Comments:
+( ) View Animal
+    ( ) Integer values displayed (translate them to strings)
+    ( ) Implementation could be cleaner
+            ex: SQL queries inside mainwindow.cpp (make a function inside database)
+( ) Add Animal
+    (X) After adding animal to db perhaps reset the form
+    ( ) allows to add animals with empty information
+    ( ) allows to add animal with ID so large it won't be displayed
+
+
+CREATE TABLE animals_non_phys_attr(
+      animalID int,
+
+      --Conscientiousness
+      intelligence int,
+      reliability int,
+      attentiveness int,
+      hardWorking int,
+      disciplined int,
+      awareness int,
+
+      --Sociable
+      friendliness int,
+      neediness int,
+      sociability int,
+      adaptable int,
+      leadership int,
+      outgoing int,
+
+      --Temperament/Nature
+      patience int,
+      independence int,
+      affection int,
+      loyalty int,
+      sharp int,
+      hyperactive int,
+
+      --Action
+      submissive int,
+      shyness int,
+      courageous int,
+      protectiveness int,
+      aggression int,
+
+      --Health/maintenance
+      healthIssues int,
+      illnessChance int,
+      activityLevel int,
+      diet int,
+      lifespan int,
+      sleepPatterns int,
+
+      primary key (animalID)
+      );

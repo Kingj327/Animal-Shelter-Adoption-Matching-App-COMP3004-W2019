@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>D1_TODO.txt</file>
+        <file>D2_TODO.txt</file>
+        <file>D3_TODO.txt</file>
+        <file>D4_TODO.txt</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewAnimalWindow</class>
+ <widget class="QMainWindow" name="ViewAnimalWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>985</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>985</width>
+      <height>616</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="AnimalAttributesLabel">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>Animal Attributes</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_42">
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_21">
+         <item>
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>AnimalID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Input Number Value</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_40">
+         <item>
+          <widget class="QLabel" name="label_40">
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <layout class="QVBoxLayout" name="PhysVLayout">
+         <item>
+          <widget class="QLabel" name="physAttrLabel">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Physical Attributes</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="physAttrHLayout">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>Athletic</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Gender</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Age</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>Size</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Weight (lbs.)</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Primary Color</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>Secondary color</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_19">
+               <item>
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>Breed</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <widget class="QLabel" name="label_20">
+                 <property name="text">
+                  <string>Type of Animal</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QComboBox" name="comboBox_2">
+               <item>
+                <property name="text">
+                 <string/>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Y</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>N</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_3">
+               <item>
+                <property name="text">
+                 <string/>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Male</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Female</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_3">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>Input Number Value</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_4">
+               <item>
+                <property name="text">
+                 <string/>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Small</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Medium</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Large</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_5">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>Input Number Value</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_6">
+               <property name="placeholderText">
+                <string>Insert Text</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_7">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>Insert Text</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_8">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>ie. Husky, Pug</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_9">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>ie. Dog, cat, etc.</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="NonPhysVLayout">
+         <item>
+          <widget class="QLabel" name="nonPhysAttrLabel">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Non-Physical Attributes</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="CategoryHLayoutTop">
+           <item>
+            <layout class="QVBoxLayout" name="Categories">
+             <item>
+              <widget class="QLabel" name="CLabelMain">
+               <property name="text">
+                <string>Category 1: Conscientiousness</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="AttributeLayout">
+               <item>
+                <layout class="QVBoxLayout" name="LabelLayout">
+                 <item>
+                  <widget class="QLabel" name="CLabel1">
+                   <property name="text">
+                    <string>Intelligence</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel2">
+                   <property name="text">
+                    <string>Reliability</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel3">
+                   <property name="text">
+                    <string>Attentiveness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel4">
+                   <property name="text">
+                    <string>Hard Working</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel5">
+                   <property name="text">
+                    <string>Disciplined</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel6">
+                   <property name="text">
+                    <string>Awareness</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="ComboBoxLayout">
+                 <item>
+                  <widget class="QComboBox" name="CBox1">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox3">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox4">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="Categories_2">
+             <item>
+              <widget class="QLabel" name="CLabelMain_2">
+               <property name="text">
+                <string>Category 2: Sociability</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="AttributeLayout_3">
+               <item>
+                <layout class="QVBoxLayout" name="LabelLayout_3">
+                 <item>
+                  <widget class="QLabel" name="CLabel1_2">
+                   <property name="text">
+                    <string>Friendliness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel2_2">
+                   <property name="text">
+                    <string>Neediness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel3_2">
+                   <property name="text">
+                    <string>Sociable</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel4_2">
+                   <property name="text">
+                    <string>Adaptable</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel5_2">
+                   <property name="text">
+                    <string>Leadership</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel6_2">
+                   <property name="text">
+                    <string>Outgoing</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="ComboBoxLayout_3">
+                 <item>
+                  <widget class="QComboBox" name="CBox1_2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox2_2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox3_2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox4_2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox5_2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox6_2">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="Categories_3">
+             <item>
+              <widget class="QLabel" name="CLabelMain_5">
+               <property name="text">
+                <string>Category 3: Temperament/Nature</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="AttributeLayout_6">
+               <item>
+                <layout class="QVBoxLayout" name="LabelLayout_6">
+                 <item>
+                  <widget class="QLabel" name="CLabel1_5">
+                   <property name="text">
+                    <string>Patience</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel2_5">
+                   <property name="text">
+                    <string>Independence</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel3_5">
+                   <property name="text">
+                    <string>Affection</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel4_5">
+                   <property name="text">
+                    <string>Loyalty</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel5_5">
+                   <property name="text">
+                    <string>Sharp</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel6_5">
+                   <property name="text">
+                    <string>Hyperactive</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="ComboBoxLayout_6">
+                 <item>
+                  <widget class="QComboBox" name="CBox1_5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox2_5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox3_5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox4_5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox5_5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox6_5">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="CategoryHLayoutBottom">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="Categories_4">
+             <item>
+              <widget class="QLabel" name="CLabelMain_6">
+               <property name="text">
+                <string>Category 4: Action</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="AttributeLayout_7">
+               <item>
+                <layout class="QVBoxLayout" name="LabelLayout_7">
+                 <item>
+                  <widget class="QLabel" name="CLabel1_6">
+                   <property name="text">
+                    <string>Submissive</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel2_6">
+                   <property name="text">
+                    <string>Shyness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel3_6">
+                   <property name="text">
+                    <string>Courageous</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel4_6">
+                   <property name="text">
+                    <string>Protectiveness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel5_6">
+                   <property name="text">
+                    <string>Aggression</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel6_6">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="ComboBoxLayout_7">
+                 <item>
+                  <widget class="QComboBox" name="CBox1_6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox2_6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox3_6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox4_6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox5_6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox6_6">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="Categories_5">
+             <item>
+              <widget class="QLabel" name="CLabelMain_7">
+               <property name="text">
+                <string>Category 5: Health/Maintenance</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="AttributeLayout_8">
+               <item>
+                <layout class="QVBoxLayout" name="LabelLayout_8">
+                 <item>
+                  <widget class="QLabel" name="CLabel1_7">
+                   <property name="text">
+                    <string>Health Issues</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel2_7">
+                   <property name="text">
+                    <string>Illness Chance</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel3_7">
+                   <property name="text">
+                    <string>Activity Level</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel4_7">
+                   <property name="text">
+                    <string>Diet</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel5_7">
+                   <property name="text">
+                    <string>Lifespan</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="CLabel6_7">
+                   <property name="text">
+                    <string>Sleep Patterns</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="ComboBoxLayout_8">
+                 <item>
+                  <widget class="QComboBox" name="CBox1_7">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox2_7">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Not at all</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Slightly</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moderately</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Considerably</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Extremely</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox3_7">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Low</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Average</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>High</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox4_7">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Heavy Diet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Light Diet</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox5_7">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Short term</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Average</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Long term</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="CBox6_7">
+                   <item>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Early Bird</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Night Owl</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="editAnimalButton">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Update Animal Attributes/Information</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>985</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
